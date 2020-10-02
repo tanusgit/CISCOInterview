@@ -9,7 +9,7 @@ public class WalmartMaxMin {
 
 		long input = m.nextLong();
 		long input2 = m.nextLong();
-		//String in = String.valueOf(input);
+		String in3 = String.valueOf(input);
 		String in2 = String.valueOf(input);
 		System.out.println(input + " " + input2);
 		
@@ -19,7 +19,18 @@ public class WalmartMaxMin {
 		long result2 = 0;
 		for (long i = input; i <= input2; i++) {
 			String in = String.valueOf(i);
-			char c = in.charAt(0);
+			for(int j = 1; j < in.length()-1; j++) {
+				if(in.charAt(j) > in.charAt(j-1) && in.charAt(j) > in.charAt(j+1)) {
+					count++;
+				}
+				if(in.charAt(j) < in.charAt(j-1) && in.charAt(j) < in.charAt(j+1)) {
+					count1++;
+				}
+			}
+		}
+		System.out.println((count + count1));
+			
+			/*char c = in.charAt(0);
 			char c1 = in.charAt(1);
 			char c2 = in.charAt(2);
 			System.out.println(c + " " + c1 + " " + c2);
@@ -35,7 +46,7 @@ public class WalmartMaxMin {
 			}		
 		}
 		
-		System.out.println("final result " + (result + result2));
+		System.out.println("final result " + (result + result2));*/
 
 	}
 }
