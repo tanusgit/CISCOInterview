@@ -22,8 +22,6 @@ public class Walmartarray {
 	    int ai = 0;
 	    int bi = 0;
 	    for(int i = 0; i < a.size() + b.size(); i++) {
-	    		
-	    	
 	    	if (ai >= a.size()) {
 			    	l.add(b.get(bi));
 			    	bi++;
