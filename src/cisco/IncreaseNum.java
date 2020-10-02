@@ -14,52 +14,47 @@ public class IncreaseNum {
 	 */
 
 	public static void main(String[] args) {
-				Scanner m = new Scanner(System.in);
-				int num = m.nextInt();
-				System.out.println("num:" + num);
+		Scanner m = new Scanner(System.in);
+		int num = m.nextInt();
+		System.out.println("num:" + num);
 
-
-				boolean asc = false;
-				while (asc == false) {
-					String in = String.valueOf(num);
-					asc = true;
-					for (int j = 0; j < in.length()-1; j++) {
-						System.out.println("comparing:" + in.charAt(j) + ", "+ in.charAt(j+1));
-						if (in.charAt(j) >= in.charAt(j+1)) {
-							asc = false;
-							System.out.println("greater");
-							break;
-						}
-					}
-					if (!asc)
-						num--;
-					System.out.println("num:" + num);
+		boolean asc = false;
+		while (asc == false) {
+			String in = String.valueOf(num);
+			asc = true;
+			for (int j = 0; j < in.length() - 1; j++) {
+				System.out.println("comparing:" + in.charAt(j) + ", " + in.charAt(j + 1));
+				if (in.charAt(j) >= in.charAt(j + 1)) {
+					asc = false;
+					System.out.println("greater");
+					break;
 				}
-				System.out.println(num);
 			}
-	
+			if (!asc)
+				num--;
+			System.out.println("num:" + num);
+		}
+		System.out.println(num);
+	}
+
 	public static int funct(int num, boolean ase) {
 		boolean asc = false;
 		while (asc == false) {
 			String in = String.valueOf(num);
 			for (int j = 0; j < in.length(); j++) {
-				if (in.charAt(j) > in.charAt(j+1)) {
+				if (in.charAt(j) > in.charAt(j + 1)) {
 					asc = false;
 				}
 			}
 			num--;
 		}
 		return 0;
-		
-		/*ase = asend(num);
-		while(ase == false) {
-			
-			funct(num-1, ase);
-			if(ase == true) {
-				break;
-			}
-		}
-		return num;*/
+
+		/*
+		 * ase = asend(num); while(ase == false) {
+		 * 
+		 * funct(num-1, ase); if(ase == true) { break; } } return num;
+		 */
 	}
 
 	public static boolean asend(int num) {
@@ -71,21 +66,20 @@ public class IncreaseNum {
 			// System.out.println("jjjjjj");
 			if (in.charAt(j + 1) > in.charAt(j)) {
 				count++;
-				
-			}else {
+
+			} else {
 				count2++;
-				
+
 			}
 		}
-		if(count > count2) {
-			//System.out.println("ascending");
+		if (count > count2) {
+			// System.out.println("ascending");
 			ase = true;
-		}
-		else {
-		//	System.out.println("desending");
+		} else {
+			// System.out.println("desending");
 			ase = false;
 		}
-		//System.out.println(num);
+		// System.out.println(num);
 		return ase;
 
 	}
